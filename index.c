@@ -4,17 +4,18 @@
 
 int decider(int x) {
 
-    int hubo = 1;
+    if (x<1) {
+        return 0;
+    }
+
+    long long hubo = 1;
     for (int i=0; i<x; i++) {
         hubo*=2;
     }
+    hubo-=1;
 
-    hubo--;
     int result=0;
-    if (hubo<2) {
-        return 0;
-    }
-    for (int i=1; i*i<x; i++) {
+    for (long long i=2; i*i<hubo; i++) {
         if (hubo%i==0) {
             result += i;
             return 0;
@@ -23,6 +24,7 @@ int decider(int x) {
     if (result == 0) {
         return 1;
     }
+    printf("%d", result);
 }
 
 int printer(int x, int result) {
@@ -36,10 +38,13 @@ int printer(int x, int result) {
 }
 
 int main() {
-    printf("안녕!");
+    printf("메르센 소수를 찾아보겠습니다.\n\n\n");
 
-    for (int i=2; i<1000; i++) {
+    for (int i=2; i<100; i++) {
         int result=decider(i);
         printer(i,result);
     }
+
+    printf("감사합니다.");
+    return 0;
 }
