@@ -24,6 +24,7 @@ public class chap0301_operator {
         k = f/g;        // 정수 몫
         k = f%g;        // 정수 나머지
 
+        k = f**2;
         
 
     }
