@@ -1,0 +1,10 @@
+package chap04;
+
+public class chap0401_conditional {
+    public static void main(String[] args) {
+        int randie = (int) Math.random()*10;
+        System.out.println(randie);
+
+
+    }
+}
